@@ -1,0 +1,8 @@
+const postsTypes = {
+  FETCH_POSTS_START: "FETCH_POSTS_START",
+  SET_POSTS: "SET_POSTS ",
+  ADD_NEW_POST_START: "ADD_NEW_POST_START",
+  CHECK_POST_LIKES_START: "CHECK_POST_LIKES_START",
+};
+
+export default postsTypes;

@@ -41,7 +41,7 @@ export default function Header() {
       setPhotoURL(photoURL);
       history.push("/");
     }
-  }, [currentUser]);
+  }, [currentUser, userData, history]);
 
   const handleSignInWithGoogle = (e) => {
     e.preventDefault();

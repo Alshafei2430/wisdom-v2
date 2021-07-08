@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
 import { fetchPostsStart } from "../redux/Posts/posts.actions";
 import Post from "./Post";
 
@@ -11,12 +10,11 @@ const mapState = ({ user, postsData }) => ({
 
 function Posts() {
   const dispatch = useDispatch();
-  const history = useHistory();
   const { currentUser, posts } = useSelector(mapState);
 
   useEffect(() => {
     dispatch(fetchPostsStart());
-  }, [currentUser]);
+  }, [currentUser, dispatch]);
 
   return (
     <div className="">
